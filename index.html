@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./style.css">
+    <title>ماشین حساب شیوا</title>
+</head>
+
+<body>
+    <div class="calc">
+        <form action="" name="calc">
+            <input type="textview" name="textview" class="screen">
+        </form>
+        <table class="buttons-section">
+            <tr>
+                <td><button onclick="document.calc.textview.value=''">C</button></td>
+                <td><button onclick="sup()"> <i class=" fas fa-backspace"></i></span></button></td>
+                <td><button onclick="document.calc.textview.value +='*'">X</button></td>
+
+                <td><button onclick="document.calc.textview.value +='/'">/</button>
+                </td>
+            </tr>
+            <tr>
+                <td><button onclick="document.calc.textview.value +='7'">7</button></td>
+                <td><button onclick="document.calc.textview.value +='8'">8</button></td>
+                <td><button onclick="document.calc.textview.value +='9'">9</button></td>
+                <td><button onclick="document.calc.textview.value += '+'">+</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="document.calc.textview.value += '4'">4</button></td>
+                <td><button onclick="document.calc.textview.value += '5'">5</button></td>
+                <td><button onclick="document.calc.textview.value += '6'">6</button></td>
+                <td><button onclick="document.calc.textview.value += '-'">-</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="document.calc.textview.value += '1'">1</button></td>
+                <td><button onclick="document.calc.textview.value += '2'">2</button></td>
+                <td><button onclick="document.calc.textview.value += '3'">3</button></td>
+                <td rowspan="2"><button style="height: 115px;"
+                        onclick="document.calc.textview.value =eval(document.calc.textview.value)">=</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="document.calc.textview.value += '0'">0</button></td>
+                <td><button onclick=" document.calc.textview.value +='.'">.</button></td>
+                <td><button
+                        onclick="document.calc.textview.value=Math.sqrt(document.calc.textview.value)">&radic;</button>
+                </td>
+
+            </tr>
+
+        </table>
+    </div>
+
+
+    <script>
+        function sup() {
+            var exp = document.calc.textview.value;
+            document.calc.textview.value = exp.substring(0, exp.length - 1);
+
+        }
+    </script>
+</body>
+
+</html>
